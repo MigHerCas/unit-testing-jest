@@ -36,4 +36,15 @@ describe("Utils test suite", () => {
 
     expect(parsedUrl.query).toEqual(expectedQuery);
   });
+
+  test.todo("Todo test");
+});
+
+describe.skip("Skipped test suite", () => {
+  test.only("First only test", () => {
+    const result = Utils.toUpperCase("abc");
+
+    // Assertion toBE
+    expect(result).toBe("ABC");
+  });
 });
