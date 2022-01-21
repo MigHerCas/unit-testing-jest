@@ -5,5 +5,7 @@ module.exports = {
   },
   testRegex: "(/__test__/.*|(\\.|/)(test|spec))\\.[jt]sx?$",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+
+  // Logs to be more explainatory
   verbose: true,
 };
