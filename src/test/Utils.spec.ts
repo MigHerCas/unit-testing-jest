@@ -37,7 +37,21 @@ describe("Utils test suite", () => {
     expect(parsedUrl.query).toEqual(expectedQuery);
   });
 
-  test.todo("Todo test");
+  test("test invalid URL", () => {
+    function expectError() {
+      Utils.parseUrl("");
+    }
+    expect(expectError).toThrowError("Empty URL");
+  });
+
+  test("test invalid URL with try/catch ", () => {
+    try {
+      Utils.parseUrl("");
+    } catch (error) {
+      expect(error).toBeInstanceOf(Error);
+      expect(error).toHaveProperty("message", "Empty URL");
+    }
+  });
 });
 
 describe.skip("Skipped test suite", () => {
