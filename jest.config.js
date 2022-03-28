@@ -8,4 +8,6 @@ module.exports = {
 
   // Logs to be more explainatory
   verbose: true,
+  collectCoverage: true,
+  collectCoverageFrom: ["<rootDir>/src/app/**/*.ts"],
 };
